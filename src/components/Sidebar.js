@@ -33,6 +33,7 @@ const Sidebar = ({ dispatch, state }) => {
         <button className={`btn ${state.landStatus ? "active" : ""}`} onClick={() => dispatch({ type:actions.LAND_FILTER, payload:true})}> True </button>
         <button className={`btn ${state.landStatus===false ? "active" : ""}`} onClick={() => dispatch({ type:actions.LAND_FILTER, payload:false})}> False </button>
       </div>
+      <button className="btn btn-primary" onClick={()=>window.location.reload() }> Reset</button>
     </div>
   );
 };
